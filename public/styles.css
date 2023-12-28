@@ -1,0 +1,61 @@
+/* Estilos generales del cuerpo de la página */
+body {
+    font-family: 'Roboto', sans-serif; /* Usa la fuente Roboto para todo el cuerpo */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #b57281;
+    margin-top: 60px; /* Ajusta este valor según la altura de tu header */
+}
+
+/* Estilos del header */
+header {
+    background-color: #33333393;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Estilos para la animación de escritura en el header */
+.typing-animation-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: white; /* Cambia el color del texto según tu diseño */
+}
+
+.typing-animation h1,
+.typing-animation p {
+    font-size: 2rem; /* Ajusta el tamaño del texto según tu diseño */
+    margin: 10px 0; /* Agrega un espacio entre el título y el párrafo */
+}
+
+.typing-animation {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid white; /* Agrega un borde derecho para simular el cursor de escritura */
+}
+
+/* Animaciones para la escritura y el parpadeo del cursor */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+    from, to {
+        border-right-color: transparent;
+    }
+    50% {
+        border-right-color: white;
+    }
+}
